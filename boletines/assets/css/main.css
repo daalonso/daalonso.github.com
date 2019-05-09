@@ -1,0 +1,172 @@
+/* VIEWPORT : ES LA PARTE VISIBLE DE NUESTRA PAGINA PARA EL USUARIO */
+/* SELECTORES
+- de clase : (.)
+- de ID : (#)
+- Etiqueta : (div)
+*/
+td{ /* Selector de Etiqueta */
+  /*border: solid 1px;*/
+  text-align: left;
+}
+
+html{
+  font-family: 'Nunito', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: #4286f4;
+}
+
+img{
+  max-width: 100%;
+}
+
+a:hover{
+  opacity: 0.8;
+}
+
+/*a:visited{
+  color: #234a89;
+}*/
+
+.title{ /* Selector de clase */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.paragraph{
+  line-height: 1.8em;
+  font-weight: 300;
+}
+
+.container{
+  background: #373B44;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  display: flex;   /* posicionamiento del elemento en el centro de nuestra pantalla */
+  align-items: center;
+  justify-content: center;
+
+}
+
+.content{
+  max-width: 960px; /* ancho maximo */
+  max-height: 500px; /* alto maximo */
+  width: 100%; /* abarque todo lo disponible en el ancho */
+  height: 80vh; /* alto sea igual al 80 % de toda la pantalla */
+  background-color: white; /* color de fondo */
+  /* box-shadow : diferencia horizontal diferencia vertical desenfoque amplitud color; */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);border-radius: 4px;
+  position: relative;
+  padding: 2em;
+  overflow: scroll;
+}
+
+.content{
+  padding: 1em;
+}
+
+td{
+  display: inline-block;
+  width: 100%;
+}
+th{
+  display: none;
+}
+td:nth-of-type(1){
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #234a89;
+}
+
+.actions{
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.close{
+  width: 40px;
+  height: 40px;
+  color: white;
+  border-radius: 50%;
+  background-color: #234a89;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table{
+  width: 100%;
+  border-spacing: 0;
+}
+
+.table td, .table th{
+  padding: 1em;
+  text-align: left;
+}
+
+.table tr:nth-child(even){background-color: #c2d8fc}
+
+.fa-star,.fa-star-o{
+  color: #ffbf00;
+}
+
+.title-item{
+  /*border-bottom-style: solid;
+  border-width: 2px;
+  border-color: #4286f4;*/
+  font-size: 2em;
+  border-bottom: #4286f4 solid 2px ;
+  padding-bottom: 1em;
+}
+
+.address{
+  font-weight: bold;
+  color: #234a89;
+  font-size: 1.2em;
+  margin-top: 2em;
+  display: inline-block;
+}
+
+.position{
+  background-color: #4286f4;
+  color: white;
+  padding: 0.5em;
+  border-radius: 4px;
+  margin-right: 0.5em;
+}
+
+.main-image{
+  float: left;
+  margin-right: 1em;
+  height: 200px;
+}
+
+@media (min-width:900px){ /* Media Queries: Condiciones que debe de cumplir */
+  th{
+    display: table-cell;
+  }
+  td{
+    display: table-cell;
+    width: auto;
+  }
+  td:nth-of-type(1){ /* Manejo de pseudoclase permite escoger elementos de acuerdo a su posicion */
+    font-size: 1em;
+  }
+  .content{
+    padding: 1.8em;
+  }
+}
+
+@media (min-height:550px){
+  .content{
+    height: 500px;
+  }
+}
