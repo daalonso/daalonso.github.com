@@ -112,7 +112,7 @@ td:nth-of-type(1){
   text-align: left;
 }
 
-.table tr:nth-child(even){background-color: #c2d8fc}
+.table tr:nth-child(even){background-color: #c2d8fc} /* (odd)->impares*/
 
 .fa-star,.fa-star-o{
   color: #ffbf00;
